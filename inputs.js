@@ -1,0 +1,81 @@
+// userInput Part
+
+var sensorCount = 10
+var mutateAmount = 0.15
+var spread = 4
+var trafficCount = 10
+var inputbrain;
+
+const mutateSlider = document.getElementById("mutateAmount")
+const sensorCounter = document.getElementById("sensorCounter")
+const angleTaker = document.getElementById("angleCounter")
+const trafficCounter = document.getElementById("trafficCounter")
+
+// var trafficCount = parseInt(trafficCounter.value)
+
+let scores = []
+let label = []
+let chart = new Chart(document.getElementById("scoreChart").getContext("2d"), {type:"line", 
+    data:{
+        labels: label,
+        datasets: [{
+            label: "Score Chart",
+            data: scores,
+            borderColor: CHART_COLORS.blue,
+            backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            fill: false,
+            cubicInterpolationMode: 'monotone',
+            tension: 0.4
+        }],
+    },
+    options:{
+        plugins: {
+            title: {
+              display: true,
+              text: 'mFactor:' + mutateAmount + '_sensorCount:' + sensorCount + '_spread:' + spread + '_traffic:' + trafficCount,
+            }
+        },
+        scales: {
+            x: {
+                text : "generations",
+                color: CHART_COLORS.blue
+            },
+            y: {
+                text : "score",
+                color: CHART_COLORS.blue
+            }
+        }
+    }
+})
+
+// trafficCounter.oninput =  function() {
+//     trafficCount = parseInt(trafficCounter.value)
+//     updatePage()
+// }
+
+function disableInput(){
+    sensorCounter.disabled = true
+    mutateSlider.disabled = true
+    trafficCounter.disabled = true
+    angleTaker.disabled = true
+}
+
+function enableInput(){
+    sensorCounter.disabled = false
+    mutateSlider.disabled = false
+    trafficCounter.disabled = false
+    angleTaker.disabled = false
+}
+
+
+
+function updatePage(){
+    document.getElementById("trafficDisplayer").innerHTML = trafficCount
+    document.getElementById("sensorCountDisplayer").innerHTML = sensorCount
+    document.getElementById("mutateAmountDisplayer").innerHTML = mutateAmount
+    document.getElementById("angleCountDisplayer").innerHTML = spread
+    
+    chart.options.plugins.title.text = 'mFactor:' + mutateAmount + '_sensorCount:' + sensorCount + '_spread:' + spread + '_traffic:' + trafficCount
+    chart.update()
+}
+

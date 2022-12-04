@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Self Driving Car</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="https://image.pngaaa.com/32/4914032-middle.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+</head>
+
+<body>
+    <div id="inputs">
+        <!-- <div id="label">
+            Traffic Cars per range of 1200 from:
+            <input type="range" class="slider" id="trafficCounter" min="10" max="60" value="20">
+            <div class="display" id="trafficDisplayer">20</div>
+        </div> -->
+
+        <div id="buttons">
+            <button onclick="start()">start</button>
+            <button onclick="stop()">stop</button>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="Charts">
+            <canvas id="scoreChart"></canvas>
+            <canvas id="bestBrainCanvas"></canvas>
+        </div>
+        <canvas id="carCanvas"></canvas>
+        <canvas id="networkCanvas"></canvas>
+    </div>
+
+    <script src="ChartUtils.js"></script>
+    <script src="util.js"></script>
+    <script src="visualizer.js"></script>
+    <script src="inputs.js"></script>
+    <script src="LearningModel.js"></script>
+    <script src="network.js"></script>
+    <script src="sensor.js"></script>
+    <script src="road.js"></script>
+    <script src="controls.js"></script>
+    <script src="car.js"></script>
+    <script src="traffic.js"></script>
+
+    <script src="dataManager.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

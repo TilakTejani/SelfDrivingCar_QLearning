@@ -1,0 +1,85 @@
+body{
+    margin: 0px;
+    background : grey;
+    overflow: hidden;   
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputs{
+    margin:0px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px double #0a0a0a;
+    position: relative;
+    background:rgba(106, 95, 95, 0.35);
+}
+
+#inputs #label{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+#input .display{
+    background-color : white;
+}
+
+#verticalButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px 5px 7px 5px;
+
+}
+button:hover{
+    background-color: antiquewhite;
+}
+
+.slider{
+    -webkit-appearance: none;
+    height : 7px;
+    outline : none;
+    border-radius: 3px;
+    margin: 10px;
+}
+.slider::-webkit-slider-thumb{
+    /* -webkit-appearance: none; */
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#networkCanvas{
+    background-color: black;
+}
+#bestBrainCanvas{
+    background-color: black;
+}
+#carCanvas{
+    background-color: lightgrey;
+}
+#charts{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#scoreChart{
+
+    background-color: rgb(255, 253, 253);
+    border: 2px solid #0a0a0a;
+}
+#bestBrainCanvas{
+    /* position: absolute; */
+
+}
