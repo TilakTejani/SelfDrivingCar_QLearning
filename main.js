@@ -37,8 +37,8 @@ async function saveBrain(brain){
 // writeText(bestBrainCtx, "Best Brain", 30, 20, 20, "gray");
 let car = null;
 let oldBrain  = null;
-let Episodes = 10000
-let Iteration = 500
+let Episodes = 5000
+let Iteration = 1000
 let batch_size = 128     // keep it in 2^n form for simple calc
 let memory_size = 5000
 let delay = 1000
