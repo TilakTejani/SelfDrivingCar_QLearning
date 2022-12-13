@@ -1,9 +1,10 @@
+
 function updateScoreChart(ctx, score){
     scores.push(score)
     label.push(label.length + 1)
     chart.data.datasets[0].data = scores
     chart.data.labels = label 
-    chart.options.plugins.title.text = 'mFactor:' + mutateAmount + '_sensorCount:' + sensorCount + '_spread:' + spread + '_traffic:' + trafficCount
+    chart.options.plugins.title.text = 'sensorCount:' + sensorCount + '_spread:' + spread
     chart.update()
 }
 

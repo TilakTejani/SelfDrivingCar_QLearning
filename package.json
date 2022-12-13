@@ -1,0 +1,23 @@
+{
+  "name": "selfdrivingcar_qlearning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TilakTejani/SelfDrivingCar_QLearning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TilakTejani/SelfDrivingCar_QLearning/issues"
+  },
+  "homepage": "https://github.com/TilakTejani/SelfDrivingCar_QLearning#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.1.0"
+  }
+}

@@ -1,8 +1,8 @@
 // userInput Part
 
-var sensorCount = 10
+var sensorCount = 15
 var mutateAmount = 0.15
-var spread = 4
+var spread = 12
 var trafficCount = 10
 var inputbrain;
 

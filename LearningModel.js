@@ -85,8 +85,8 @@ class LearningModel{
         return await this.calc(state)
     }
     
-    async replay(batch_size){
-        console.log("replaying")
+    async replay(batch_size, doDecay){
+        // console.log("replaying")
         // choose random minibatch
         let minibatch = getRandomSubset(this.memory, batch_size)
 
@@ -111,10 +111,10 @@ class LearningModel{
                 // console.log("2")
             })
         } 
-        if(this.epsilon > this.epsilonMin){
+        if(doDecay && this.epsilon > this.epsilonMin){
             this.epsilon *= this.epsilonDecay
             // console.log("Epsilon decayed")
         }
-        console.log("Learning done")
+        // console.log("Learning done")
     }
 }

@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="https://image.pngaaa.com/32/4914032-middle.png" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@0.4.0"> </script>
 </head>
 
 <body>
@@ -27,10 +27,9 @@
     <div id="main">
         <div id="Charts">
             <canvas id="scoreChart"></canvas>
-            <canvas id="bestBrainCanvas"></canvas>
+            <div id="output"></div>
         </div>
         <canvas id="carCanvas"></canvas>
-        <canvas id="networkCanvas"></canvas>
     </div>
 
     <script src="ChartUtils.js"></script>
